@@ -1,71 +1,64 @@
-body{
-    margin: 0px;
+*{
     padding: 0px;
+    margin: 0px;
 }
 
-header{
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
     width: 100vw;
-    height: 5vh;
+    height: 10vh;
     position: fixed;
-    background-color: rgb(65, 65, 65);
     transition: 0.2s;
 }
 
-.headerDown{
+.navDown{
     height: 20vh;
 }
 
-#wrapper{
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 5px;
+.showNavItems{
+    background-color: turquoise;
 }
 
-div div{
-    background-color: grey;
-    padding: 20px;
-    height: 100vh;
-}
-
-#image{
-    background-image: url(../img/jakob-owens-HuNenPCNG84-unsplash.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-size: 25vw;
-    color: white;
-    text-align: center;
-}
-
-#data{
-    height: 20vh;
-    background-color: rgb(65, 65, 65);
-}
-
-.hideMenu{
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    z-index: 10;
+nav div{
     background-color: transparent;
+    width: 25vw;
+    transition: 0.2s;
 }
 
-.hideMenuShow{
-    display: block;
+div #wrapper{
+    display: grid;
+    grid-template-areas:
+    'he'
+    'se'
+    ;
+}
+
+header{
+    background-color: turquoise;
+    height: 100vh;
+    grid-area: he;
+}
+
+section #flex_wrapper{
+    grid-area: se;
+    display: flex;
+    flex-direction: row;
+}
+
+article{
+    width: 100vw;
+    height: 50vh;
+    background-color: turquoise;
+}
+
+footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: teal;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 1000px){
-    div div{
-        background-color: grey;
-        padding: 20px;
-        height: 50vh;
-    }
-
-    #image{
-        height: 50vh;
-    }
 }

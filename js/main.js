@@ -1,11 +1,13 @@
 function toggleMenu(){
-    let menu = document.querySelector("header");
-    let hideMenu = document.querySelector(".hideMenu");
-    hideMenu.classList.toggle("hideMenuShow");
-    menu.classList.toggle("headerDown");
+    let menu = document.querySelector("nav");
+    menu.classList.toggle("navDown");
+
+    const nodes = document.querySelectorAll (".navItems");
+
+    Array.prototype.forEach.call (nodes, node => {
+    node.classList.toggle ("showNavItems");
+    })
 }
 
-let menu = document.querySelector("header");
+let menu = document.querySelector("nav");
 menu.addEventListener("click", toggleMenu);
-let hideMenu = document.querySelector(".hideMenu");
-hideMenu.addEventListener("click", toggleMenu);
